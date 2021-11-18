@@ -15,7 +15,6 @@ namespace task_5._2
             
             Random random = new Random();
 
-
             for (int i = 0; i < numbers.Length; i++)            
             {
                 numbers[i] = random.Next(0, 50);

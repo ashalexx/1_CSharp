@@ -22,25 +22,13 @@ namespace task_5._3
             }
             Console.WriteLine();
 
-            int max = numbers[0];
-            int min = numbers[0];
+            for (int i = 0; i < 9; i++)
+			{
+                for (int j = i+1; j < 10; j++)
+			{
 
-            foreach (int a in numbers)
-            {
-                if (a > max)
-                {
-                    max = a;
-                }
-                if (a < min)
-                {
-                    min = a;
-                }
-            }
-            Console.WriteLine("Максимальное число в массиве = {0} ", max);
-            Console.WriteLine("Минимальное число в массиве = {0} ", min);
-            int sum = min + max;
-            Console.WriteLine("Сумма {0} + {1} = {2}", max, min, sum);
-            Console.WriteLine();
+			}
+			}
 
 
             Console.WriteLine("Нажмите любую клавишу...");
