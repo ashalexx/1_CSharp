@@ -19,17 +19,18 @@ namespace task_7._2
             Console.ReadKey();
         }
         static void calculationCubeVolumeArea(Double a)
-        {
+        {            
             if (a>0)
 	        {
                 Double S = 6*Math.Pow(a, 2);
                 Double V = Math.Pow(a, 3);
                 Console.WriteLine("Грань куба a = {0}\n Площадь S = {1}\n Объем V = {2}", a, S, V);
-	        }
+	        }     
             else
 	        {
                 Console.WriteLine("Вы ввели отрицательное значение грани.");
-	        }                        
+	        }
+                        
         }
 
     }
