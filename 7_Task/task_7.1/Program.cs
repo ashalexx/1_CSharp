@@ -31,7 +31,8 @@ namespace task_7._1
         }    
         //создаем метод высичления площади треугольника
         static Double Area(Double A, Double B, Double C)
-        {            
+        {    
+            
             Double perimeterHalf = Convert.ToDouble((A + B + C) / 2);//вычисляем половину периметра треугольника
             Double triangleArea = Convert.ToDouble(Math.Sqrt(perimeterHalf * (perimeterHalf - A) * (perimeterHalf - B) * (perimeterHalf - C)));//находим периметр треугольника
             return triangleArea;
