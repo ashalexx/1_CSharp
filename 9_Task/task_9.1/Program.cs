@@ -18,10 +18,10 @@ namespace task_9._1
             Console.WriteLine();
             Console.WriteLine("Что вы хотите сделать?:\n 1 - сложение\n 2 - вычитание\n 3 - произведение\n 4 - частное\n");
             int enteredNumber = Convert.ToInt32(Console.ReadLine());
-            int[] vs = {1, 2, 3, 4};
+            int[] vs = {1, 2, 3, 4};//создаем массив из цифр от 1 до 4, которые нужно нажимать
             try 
 	        {                
-                enteredNumber = vs[enteredNumber-1];                
+                enteredNumber = vs[enteredNumber-1];//проверяем введенное число с совпадением в массиве                
 	            switch(enteredNumber)
 	            {
                     case 1:
@@ -36,14 +36,12 @@ namespace task_9._1
                     case 4:
                         Console.WriteLine("Вы ввели {0}\nЧастное чисел равна {1}", enteredNumber, (A/B));
                         break;
-	                }	
-                
+	                }	                
 	        }
-	        catch 
+	        catch//ловим ошибку если число отлично от того что в массиве vs
             {
                 Console.WriteLine("Вы ввели число {0}", enteredNumber);
-                Console.WriteLine("Возникло исключение!");
-                
+                Console.WriteLine("Возникло исключение!");                
             }
             Console.WriteLine();
             Console.WriteLine("Нажмите любую клавишу...");
