@@ -10,20 +10,20 @@ namespace Task_11._1
     {
         static void Main(string[] args)
         {
-            MyStruct my = new MyStruct { b = 1, k = 4 };
-            my.Root();
+            MyStruct my = new MyStruct { b = 1, k = 4 };//создаем экземпляр структыру
+            my.Root();//вызов метода
             Console.WriteLine();
             Console.WriteLine("Нажмите любую клавишу...");
             Console.ReadKey();
         }
-        struct MyStruct
+        struct MyStruct//создание сруктуры
         {
             public double k;
             public double b;
             public double x;
-            public void Root()
+            public void Root()//метод в структуре
             {
-                x = (0 - b) / k;
+                x = - b / k;
                 Console.WriteLine(x);
             }
         }
