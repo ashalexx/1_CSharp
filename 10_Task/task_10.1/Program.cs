@@ -25,26 +25,24 @@ namespace task_10._1
     {
         static void Main(string[] args)
         {
-            
-            MyClass qw = new MyClass();
-            qw.Gradus = 8;//не забываем про БОЛЬШУЮ заглавную букву
-            qw.Min = 1;
-            qw.Sec = 45;
-            
-            qw.ToRadians();
+            MyClass qw = new MyClass(8, 0, 0);//создаем экземпляр класса 
+                                              //qw.Gradus = 8;//не забываем про БОЛЬШУЮ заглавную букву
+                                              //qw.Min = 0;
+                                              //qw.Sec = 0;
+
+            qw.ToRadians();//вызов метода класса MyClass
             Console.WriteLine();
-                              
+
             Console.WriteLine("Нажмите любую клавишу...");
             Console.ReadKey();
         }
     }
-    public class MyClass
+    public class MyClass//конструктор
     {
         private int gradus;
         private int min;
         private int sec;
-                
-        public int Gradus
+        public int Gradus//определение свойства с проверкой
         {
             set
             {
@@ -54,7 +52,7 @@ namespace task_10._1
                 }
                 else
                 {
-                    Console.WriteLine("Значение gradus отрицательное\n");
+                    Console.WriteLine("Значение gradus отрицательное или равно 0\n");
                 }
             }
             get
@@ -62,11 +60,11 @@ namespace task_10._1
                 return gradus;
             }
         }
-        public int Min
+        public int Min//определение свойства с проверкой
         {
             set
             {
-                if (value > 0)
+                if (value >= 0)
                 {
                     min = value;
                 }
@@ -80,11 +78,11 @@ namespace task_10._1
                 return min;
             }
         }
-        public int Sec
+        public int Sec//определение свойства с проверкой
         {
             set
             {
-                if (value > 0)
+                if (value >= 0)
                 {
                     sec = value;
                 }
@@ -98,16 +96,21 @@ namespace task_10._1
                 return sec;
             }
         }
-
+        public MyClass(int gradus, int min, int sec)
+        {
+            Gradus = gradus;
+            Min = min;
+            Sec = sec;
+        }
         public void ToRadians()
+        {
+            if (gradus > 0 && min >= 0 && sec >= 0)
             {
-                if (true)
-                {
-
-                }
                 double Radians = Convert.ToDouble((gradus + min / 60 + sec / 3600) * (Math.PI) / 180);
                 Console.WriteLine("{0} Радиан", Radians);
             }
+
+        }
     }
-	    
+
 }
