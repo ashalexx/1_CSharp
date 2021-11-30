@@ -26,7 +26,7 @@ namespace task_15._1
             }
             Console.WriteLine();
             GeomProgression geomProgression = new GeomProgression();
-            Console.WriteLine("Геометрическая прогрессия\n");
+            Console.WriteLine("Геометрическая прогрессия:\n");
             for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine(geomProgression.getNext());
@@ -76,7 +76,7 @@ namespace task_15._1
         public int val = 1;      
         public int getNext()
         {           
-            val *= 2;//задаем шаг 
+            val *= 5;//задаем шаг 
             return val;//возвращяем
         }
         public int reset()
