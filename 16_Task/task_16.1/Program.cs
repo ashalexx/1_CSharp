@@ -121,12 +121,9 @@ namespace task_16._1
         }
     }
     class Product
-    {
-        [JsonPropertyName("Код продукта")]
+    {        
         public int productCode { get; set; }
-        [JsonPropertyName("Наименование продукта")]
         public string productName { get; set; }
-        [JsonPropertyName("Цена продукта")]
         public double productPrice { get; set; }
         public void print()
         {
