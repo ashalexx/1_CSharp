@@ -18,8 +18,6 @@ namespace task_16._1
             string jsonString = "{\"productCode\": 0,\"productName\":\"\",\"productPrice\": 0}";
             Product product = JsonSerializer.Deserialize<Product>(jsonString);
 
-            string[] shop = new string[5];            
-
             Console.Write("Введите код товара 1: ");
             int code1 = Convert.ToInt32(Console.ReadLine());
             Console.Write("Введите Наименование  товара 1: ");
@@ -32,6 +30,7 @@ namespace task_16._1
                 productName = name1,
                 productPrice = price1
             };
+           
 
             JsonSerializerOptions options = new JsonSerializerOptions()
             {
@@ -39,8 +38,8 @@ namespace task_16._1
                 WriteIndented = true
             };
 
-            string jsonString1 = JsonSerializer.Serialize(product1, options);
-            shop[0] =  jsonString1;            
+            //string jsonString1 = JsonSerializer.Serialize(product1, options);
+            //shop[0] =  jsonString1;            
 
             Console.Write("Введите код товара 2: ");
             int code2 = Convert.ToInt32(Console.ReadLine());
@@ -54,8 +53,8 @@ namespace task_16._1
                 productName = name2,
                 productPrice = price2
             };
-            string jsonString2 = JsonSerializer.Serialize(product2, options);
-            shop[1] = jsonString2;
+            //string jsonString2 = JsonSerializer.Serialize(product2, options);
+            //shop[1] = jsonString2;
 
             Console.Write("Введите код товара 3: ");
             int code3 = Convert.ToInt32(Console.ReadLine());
@@ -70,8 +69,8 @@ namespace task_16._1
                 productPrice = price3
             };
 
-            string jsonString3 = JsonSerializer.Serialize(product3, options);
-            shop[2] = jsonString3;
+            //string jsonString3 = JsonSerializer.Serialize(product3, options);
+            //shop[2] = jsonString3;
 
             Console.Write("Введите код товара 4: ");
             int code4 = Convert.ToInt32(Console.ReadLine());
@@ -85,8 +84,8 @@ namespace task_16._1
                 productName = name4,
                 productPrice = price4
             };
-            string jsonString4 = JsonSerializer.Serialize(product4, options);
-            shop[3] = jsonString4;
+            //string jsonString4 = JsonSerializer.Serialize(product4, options);
+            //shop[3] = jsonString4;
 
             Console.Write("Введите код товара 5: ");
             int code5 = Convert.ToInt32(Console.ReadLine());
@@ -100,10 +99,12 @@ namespace task_16._1
                 productName = name5,
                 productPrice = price5
             };
-            string jsonString5 = JsonSerializer.Serialize(product5, options);
-            shop[4] = jsonString5;
+            //string jsonString5 = JsonSerializer.Serialize(product5, options);
+            //shop[4] = jsonString5;
 
+            Product[] shop = new Product[] { product1, product2, product3, product4, product5 };
 
+            string jsonShop = JsonSerializer.Serialize(shop, options);
 
             //создаем файл json
             string path = "D:\\Папка\\text.json";
@@ -111,9 +112,9 @@ namespace task_16._1
             {
                 File.Create(path).Close(); //создать файл
             }
-            StreamWriter sw = new StreamWriter(path, true);
+            StreamWriter sw = new StreamWriter(path);
 
-            sw.WriteLine(string.Join(" ", shop));
+            sw.WriteLine(jsonShop);
             sw.Close();//закрываем файл после записи                      
             
             Console.WriteLine("Нажмите любую клавишу...");

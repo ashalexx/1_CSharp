@@ -22,7 +22,7 @@ namespace task_16._2
             //Console.WriteLine(sr.ReadToEnd());
 
             //string jsonString = File.ReadAllText(path);
-            Product json = JsonSerializer.Deserialize<Product>(sr.ReadLine());
+            Product json = JsonSerializer.Deserialize<Product>(sr.ReadToEnd());
             //Console.WriteLine(json);
             Console.WriteLine("Нажмите любую клавишу...");
             Console.ReadKey();
