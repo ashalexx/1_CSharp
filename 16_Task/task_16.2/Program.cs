@@ -16,14 +16,24 @@ namespace task_16._2
         static void Main(string[] args)
         {
             string path = "D:\\Папка\\text.json";
+
             StreamReader sr = new StreamReader(path);
 
-            //string json = JsonSerializer.Serialize<Product>(sr.Read();
-            //Console.WriteLine(sr.ReadToEnd());
+            Product[] jsonShop = JsonSerializer.Deserialize<Product[]>(sr.ReadToEnd());
+            //var max = jsonShop.OrderByDescending(x => x.productPrice).FirstOrDefault().productName;
+            //Console.WriteLine("Самая высокая цена = {0}", max);
+            Product maxProduct = jsonShop[4];//берем первый экземпляр в массиве
+            foreach (Product product in jsonShop)//проходимся по этому массиву циклом
+            {
+                if (product.productPrice > maxProduct.productPrice)//если в этом массиве productPrice больше чем цена в массиве maxProductPrice
+                {
+                    maxProduct = product; //то, maxProduct становится массивом из цикла
+                }
 
-            //string jsonString = File.ReadAllText(path);
-            Product json = JsonSerializer.Deserialize<Product>(sr.ReadToEnd());
-            //Console.WriteLine(json);
+            }
+            Console.WriteLine("Товар с самой высокой ценой = {0}", maxProduct.productName); 
+            Console.WriteLine();
+
             Console.WriteLine("Нажмите любую клавишу...");
             Console.ReadKey();
         }

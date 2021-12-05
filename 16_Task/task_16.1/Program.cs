@@ -20,9 +20,9 @@ namespace task_16._1
 
             Console.Write("Введите код товара 1: ");
             int code1 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введите Наименование  товара 1: ");
+            Console.Write("Введите Наименование товара 1: ");
             string name1 = Console.ReadLine();
-            Console.Write("Введите цену  товара 1: ");
+            Console.Write("Введите цену товара 1: ");
             double price1 = Convert.ToDouble(Console.ReadLine());
             Product product1 = new Product()
             {
@@ -39,9 +39,9 @@ namespace task_16._1
 
             Console.Write("Введите код товара 2: ");
             int code2 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введите Наименование  товара 2: ");
+            Console.Write("Введите Наименование товара 2: ");
             string name2 = Console.ReadLine();
-            Console.Write("Введите цену  товара 2: ");
+            Console.Write("Введите цену товара 2: ");
             double price2 = Convert.ToDouble(Console.ReadLine());
             Product product2 = new Product()
             {
@@ -52,9 +52,9 @@ namespace task_16._1
 
             Console.Write("Введите код товара 3: ");
             int code3 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введите Наименование  товара 3: ");
+            Console.Write("Введите Наименование товара 3: ");
             string name3 = Console.ReadLine();
-            Console.Write("Введите цену  товара 3: ");
+            Console.Write("Введите цену товара 3: ");
             double price3 = Convert.ToDouble(Console.ReadLine());
             Product product3 = new Product()
             {
@@ -65,9 +65,9 @@ namespace task_16._1
 
             Console.Write("Введите код товара 4: ");
             int code4 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введите Наименование  товара 4: ");
+            Console.Write("Введите Наименование товара 4: ");
             string name4 = Console.ReadLine();
-            Console.Write("Введите цену  товара 4: ");
+            Console.Write("Введите цену товара 4: ");
             double price4 = Convert.ToDouble(Console.ReadLine());
             Product product4 = new Product()
             {
@@ -80,7 +80,7 @@ namespace task_16._1
             int code5 = Convert.ToInt32(Console.ReadLine());
             Console.Write("Введите Наименование  товара 5: ");
             string name5 = Console.ReadLine();
-            Console.Write("Введите цену  товара 5: ");
+            Console.Write("Введите цену товара 5: ");
             double price5 = Convert.ToDouble(Console.ReadLine());
             Product product5 = new Product()
             {
