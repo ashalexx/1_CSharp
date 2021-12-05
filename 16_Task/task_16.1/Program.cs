@@ -29,17 +29,13 @@ namespace task_16._1
                 productCode = code1,
                 productName = name1,
                 productPrice = price1
-            };
-           
+            };           
 
             JsonSerializerOptions options = new JsonSerializerOptions()
             {
                 Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Cyrillic),
                 WriteIndented = true
-            };
-
-            //string jsonString1 = JsonSerializer.Serialize(product1, options);
-            //shop[0] =  jsonString1;            
+            };           
 
             Console.Write("Введите код товара 2: ");
             int code2 = Convert.ToInt32(Console.ReadLine());
@@ -53,8 +49,6 @@ namespace task_16._1
                 productName = name2,
                 productPrice = price2
             };
-            //string jsonString2 = JsonSerializer.Serialize(product2, options);
-            //shop[1] = jsonString2;
 
             Console.Write("Введите код товара 3: ");
             int code3 = Convert.ToInt32(Console.ReadLine());
@@ -69,9 +63,6 @@ namespace task_16._1
                 productPrice = price3
             };
 
-            //string jsonString3 = JsonSerializer.Serialize(product3, options);
-            //shop[2] = jsonString3;
-
             Console.Write("Введите код товара 4: ");
             int code4 = Convert.ToInt32(Console.ReadLine());
             Console.Write("Введите Наименование  товара 4: ");
@@ -83,9 +74,7 @@ namespace task_16._1
                 productCode = code4,
                 productName = name4,
                 productPrice = price4
-            };
-            //string jsonString4 = JsonSerializer.Serialize(product4, options);
-            //shop[3] = jsonString4;
+            };            
 
             Console.Write("Введите код товара 5: ");
             int code5 = Convert.ToInt32(Console.ReadLine());
@@ -98,23 +87,21 @@ namespace task_16._1
                 productCode = code5,
                 productName = name5,
                 productPrice = price5
-            };
-            //string jsonString5 = JsonSerializer.Serialize(product5, options);
-            //shop[4] = jsonString5;
+            };           
 
-            Product[] shop = new Product[] { product1, product2, product3, product4, product5 };
+            Product[] shop = new Product[] { product1, product2, product3, product4, product5 };//создаем массив из экземпляров класса Product
 
-            string jsonShop = JsonSerializer.Serialize(shop, options);
+            string jsonShop = JsonSerializer.Serialize(shop, options);//сериализуем массив shop
 
             //создаем файл json
-            string path = "D:\\Папка\\text.json";
+            string path = "D:\\Папка\\text.json";//задаем путь к папке
             if (!File.Exists(path))//услови, если этого файла нет
             {
                 File.Create(path).Close(); //создать файл
             }
             StreamWriter sw = new StreamWriter(path);
 
-            sw.WriteLine(jsonShop);
+            sw.WriteLine(jsonShop);//записываем в файл сериализованный файл
             sw.Close();//закрываем файл после записи                      
             
             Console.WriteLine("Нажмите любую клавишу...");
@@ -125,16 +112,6 @@ namespace task_16._1
     {        
         public int productCode { get; set; }
         public string productName { get; set; }
-        public double productPrice { get; set; }
-        public void print()
-        {
-            Console.WriteLine("Код товара: {0}", productCode);
-            Console.WriteLine("Наименование товара: {0}", productName);
-            Console.WriteLine("Цена товара: {0}", productPrice);
-        }
-        public string getProduct()
-        {
-            return productCode + " " + productName + " " + productPrice;
-        }        
+        public double productPrice { get; set; }          
     }
 }
