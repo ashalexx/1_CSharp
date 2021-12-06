@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task_17.1", "task_17.1.csproj", "{77A39C5B-E9A5-4476-AE90-6244F19EC5B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_17", "..\lab_17\lab_17.csproj", "{2106BB97-D250-4032-B1C2-ADB0511706ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77A39C5B-E9A5-4476-AE90-6244F19EC5B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77A39C5B-E9A5-4476-AE90-6244F19EC5B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77A39C5B-E9A5-4476-AE90-6244F19EC5B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77A39C5B-E9A5-4476-AE90-6244F19EC5B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2106BB97-D250-4032-B1C2-ADB0511706ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2106BB97-D250-4032-B1C2-ADB0511706ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2106BB97-D250-4032-B1C2-ADB0511706ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2106BB97-D250-4032-B1C2-ADB0511706ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D134C05-1A71-4FBA-A302-942255E43E64}
+	EndGlobalSection
+EndGlobal
