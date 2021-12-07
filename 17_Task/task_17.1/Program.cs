@@ -10,12 +10,13 @@ namespace task_17._1
     {
         static void Main(string[] args)
         {
-            Bank<int> bank = new Bank<int>(1, "Вася", 45);
-            Bank<int> bank1 = new Bank<int>(34, "Глеб", 3256);
-            Bank<int> bank2 = new Bank<int>(57, "Нина", 98);
-            
-            bank.Write();
+            Bank<int> bank = new Bank<int>(1, "Глебков Василий Алексеевич", 45);
+            Bank<string> bank1 = new Bank<string>("34", "Зигулин Глеб Федорович", 3256);
+            Bank<double> bank2 = new Bank<double>(57, "Жимухина Нина Петровна", 98);
 
+            bank.Print();
+            bank1.Print();
+            bank2.Print();
 
             Console.WriteLine("Нажмите любую клавишу...");
             Console.ReadKey();
@@ -25,28 +26,17 @@ namespace task_17._1
     {
         public T AccountNumber { get; private set; }
         public string Name { get; private set; }
-        public double Balans { get; private set; }
+        public int Balans { get; private set; }
 
-        public Bank(T AccountNumber, string Name, double Balans)
+        public Bank(T AccountNumber, string Name, int Balans)
         {
             this.AccountNumber = AccountNumber;
             this.Name = Name;
             this.Balans = Balans;
-        }
-
-        public void Write()
+        }      
+        public void Print()
         {
-            Console.Write("Введите номер счета: ");
-            var AccountNumber = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введите имя: ");
-            var Name = Convert.ToString(Console.ReadLine());
-            Console.Write("Введите баланс: ");
-            var Balans = Convert.ToInt32(Console.ReadLine());
-            
-        }
-        static void Reade()
-        {
-
+            Console.WriteLine("Номер счета: {0}\nФИО: {1}\nБаланс: {2} коп.\n", AccountNumber, Name, Balans);
         }
     }
 }
