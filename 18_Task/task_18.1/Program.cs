@@ -7,53 +7,47 @@ using System.Threading.Tasks;
 
 namespace task_18._1
 {
-    internal class Program
+    internal static class Program
     {
         static void Main(string[] args)
         {
-            string str = "(())";
+            var str = "([][()])";
             
             Stack<char> stack = new Stack<char>();
-            bool b = true;
-            foreach (char item in str)
+            stack.Push(str[0]);// помещаем в стек первый символ в строке str
+            for (int i = 1; i < str.Length; i++) // проходимся циклом по строке, выбирая каждый символ
             {
-                switch (item)
+                if (str[i] == '(' || str[i] == '[' || str[i] == '{') // если встечается симол '(' или '[' или '{' то ->
                 {
-                    case '(': stack.Push(')'); break;
-                    case '[': stack.Push(']'); break;
-                    case '{': stack.Push('}'); break;
-
-                    case ')':
-                    case ']':
-                    case '}':
-                        if (stack.Count() == 0)
-                        {
-                            b = false;
-                            break;
-                        }
-                        if (stack.Peek() == '(' && item == ')')
-                        {
-                            continue;
-                        }
-                        if (stack.Peek() == '[' && item == ']')
-                        {
-                            continue;
-                        }
-                        if (stack.Peek() == '{' && item == '}')
-                        {
-                            continue;
-                        }
-                        b = false;
+                    stack.Push(str[i]);// в стэк помещаем символ который встретился(одна из открывающихся скобок)
+                }
+                else if(str[i] == ')')
+                {
+                    if (stack.Peek() == '(')// если в вершине стека стоит скобка ')', то ->
+                        stack.Pop();        // убираем его из стека 
+                    else if (stack.Peek() == '[' || stack.Peek() == '{')
                         break;
-                    default:
+                }
+                else if (str[i] == ']')
+                {
+                    if (stack.Peek() == '[')
+                        stack.Pop();
+                    else if (stack.Peek() == '(' || stack.Peek() == '{')
+                        break;
+                }
+                else if (str[i] == '}')
+                {
+                    if (stack.Peek() == '{')
+                        stack.Pop();
+                    else if (stack.Peek() == '(' || stack.Peek() == '[')
                         break;
                 }
             }
-            if (b)
-                Console.WriteLine("ok");            
+            if (stack.Count() == 0)
+                Console.WriteLine("Скобки выствлены правильно");
             else
-                Console.WriteLine("no");
-
+                Console.WriteLine("Скобки выставлены не корректно");
+            
             Console.WriteLine();
             Console.WriteLine("Нажмите любую клавишу...");
             Console.ReadKey();
