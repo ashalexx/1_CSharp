@@ -11,33 +11,48 @@ namespace task_18._1
     {
         static void Main(string[] args)
         {
-            string str = "([al(s)kdv{lam}v{]})";
+            string str = "(())";
             
             Stack<char> stack = new Stack<char>();
-
+            bool b = true;
             foreach (char item in str)
-            {                
+            {
                 switch (item)
                 {
                     case '(': stack.Push(')'); break;
                     case '[': stack.Push(']'); break;
                     case '{': stack.Push('}'); break;
 
-                    //case ')':
-                    //case ']':
-                    //case '}':
-                    //    if (stack.Count == 0)
-                    //    {
-                    //        Console.WriteLine("Дана строка {0}\n", str);
-                    //        Console.WriteLine("Расположение скобок не правильное.");
-                    //    }
-                    //    stack.Pop();
-                    //    break;
-                    //default:
-                    //    break;
+                    case ')':
+                    case ']':
+                    case '}':
+                        if (stack.Count() == 0)
+                        {
+                            b = false;
+                            break;
+                        }
+                        if (stack.Peek() == '(' && item == ')')
+                        {
+                            continue;
+                        }
+                        if (stack.Peek() == '[' && item == ']')
+                        {
+                            continue;
+                        }
+                        if (stack.Peek() == '{' && item == '}')
+                        {
+                            continue;
+                        }
+                        b = false;
+                        break;
+                    default:
+                        break;
                 }
             }
-            
+            if (b)
+                Console.WriteLine("ok");            
+            else
+                Console.WriteLine("no");
 
             Console.WriteLine();
             Console.WriteLine("Нажмите любую клавишу...");
