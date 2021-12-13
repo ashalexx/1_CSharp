@@ -51,7 +51,7 @@ namespace task_21._1
                 {
                     if (pole[i, j] == 0)
                         pole[i, j] = 1;
-                    Thread.Sleep(1);
+                    Thread.Sleep(1000);
                 }
             }
         }

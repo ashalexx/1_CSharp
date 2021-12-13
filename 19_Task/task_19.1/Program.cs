@@ -65,12 +65,17 @@ namespace task_19._1
             Console.ReadKey();
 
             Console.WriteLine("\n====вывести весь список, сгруппированный по типу процессора====\n");
-            List<string> pcSortCpu = listPc
-                .Select(d=>d.CpuType)
-                .Distinct()
+            var pcSortCpu = listPc
+                .GroupBy(g => g.CpuType)
                 .ToList();
-            foreach (string d in pcSortCpu)
-                Console.WriteLine(d);
+            foreach (IGrouping<string,Pc>  g in pcSortCpu)
+            {
+                Console.WriteLine("\nПроцессор: {0}", g.Key); // выводим ключик
+                foreach (var comp in g) // выводим все элементы этого ключа
+                {
+                    Console.WriteLine(comp.Brand);
+                }
+            }                
             Console.WriteLine("\nНажмите клавишу чтобы продожить...");
             Console.ReadKey();
 
