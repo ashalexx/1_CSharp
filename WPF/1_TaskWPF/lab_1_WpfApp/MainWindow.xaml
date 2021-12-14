@@ -1,0 +1,14 @@
+﻿<Window x:Class="lab_1_WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab_1_WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="grid">
+        <Button Content="Button" HorizontalAlignment="Left" Margin="403,152,0,0" VerticalAlignment="Top" Grid.Column="2"/>
+        <Button Content="Кнопка" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,217,0,0" Width="109" Foreground="Black" BorderBrush="#FFF11A1A" Height="33" Click="Button_Click"/>
+
+    </Grid>
+</Window>
