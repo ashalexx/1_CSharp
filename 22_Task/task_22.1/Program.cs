@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 namespace task_22._1
-{
+{                       // не понял тему от слова совсем, что-то набрал в коде, может не правильно
     internal class Program
     {
         static int Sum(int[] mass)
