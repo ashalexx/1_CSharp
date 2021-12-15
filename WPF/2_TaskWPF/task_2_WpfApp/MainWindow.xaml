@@ -11,7 +11,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBox Grid.Row="0" Height="60" Margin="2"/>
+        <TextBox Grid.Row="0" Height="60" Margin="2" Background="#FF88A072"/>
         <UniformGrid Grid.Row="1" Rows="6" Columns="4" Margin="2">
             <Button Content="%" Background="#FF9B9B9B" Margin="1"/>
             <Button Content="CE" Background="#FF9B9B9B" Margin="1"/>
