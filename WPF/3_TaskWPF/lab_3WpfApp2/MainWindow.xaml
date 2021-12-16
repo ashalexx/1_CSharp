@@ -30,19 +30,19 @@
                 <Image Source="Data/button_blank_blue_14984.png" Width="25"/>
             </Button>
             <Separator/>
-            <Button>
+            <Button Click="Button_Click_1">
                 <Image Source="Data/button_blank_green_14986.png" Width="25"/>
             </Button>
             <Separator/>
-            <Button>
-                    <Image Source="Data/button_blank_yellow_14988.png" Width="25"/>
+            <Button Click="Button_Click_2">
+                <Image Source="Data/button_blank_yellow_14988.png" Width="25"/>
             </Button>
             <Separator/>
         </ToolBar>
         <ToolBar Margin="5" Padding="5">
                 <StackPanel VerticalAlignment="Center">
-                    <RadioButton Content="Черный" IsChecked="True"/>
-                    <RadioButton Content="Красный"/>
+                    <RadioButton Content="Черный" IsChecked="True" Checked="RadioButton_Checked"/>
+                    <RadioButton Content="Красный" Checked="RadioButton_Checked_1"/>
                 </StackPanel>   
         </ToolBar>
         </ToolBarTray>
