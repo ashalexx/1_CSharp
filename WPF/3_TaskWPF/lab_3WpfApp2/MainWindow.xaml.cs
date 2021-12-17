@@ -60,26 +60,26 @@ namespace lab_3WpfApp2
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            if (textBox.TextDecorations == null)
-                textBox.TextDecorations = TextDecorations.Underline;
+            if (textBox != null)
+                if (textBox.TextDecorations == null)
+                textBox.TextDecorations = TextDecorations.Baseline; // не пойму почему не сробатывает кнопка с первого нажатия
             else
                 textBox.TextDecorations = null;
         }
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             if (textBox != null)
-                if (true)
-                    textBox.Foreground = new SolidColorBrush(Colors.Black);
+                //if (true)
+                textBox.Foreground = new SolidColorBrush(Colors.Black);
             //if(false)
             //    textBox.Foreground = null;
-
         }
 
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
         {
             if (textBox != null)
-                if (true)
-                    textBox.Foreground = new SolidColorBrush(Colors.Red);
+                //    if (true)
+                textBox.Foreground = new SolidColorBrush(Colors.Red);
             //if (false)
             //    textBox.Foreground = null;
         }
