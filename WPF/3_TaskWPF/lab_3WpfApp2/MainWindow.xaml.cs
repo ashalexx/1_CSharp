@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,7 +63,7 @@ namespace lab_3WpfApp2
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             if (textBox != null)
-                if (textBox.TextDecorations == null)
+                if (textBox.TextDecorations != TextDecorations.Baseline)
                 textBox.TextDecorations = TextDecorations.Baseline; // не пойму почему не сробатывает кнопка с первого нажатия
             else
                 textBox.TextDecorations = null;
@@ -82,6 +84,27 @@ namespace lab_3WpfApp2
                 textBox.Foreground = new SolidColorBrush(Colors.Red);
             //if (false)
             //    textBox.Foreground = null;
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Текстовый файл(*.txt)|*.txt|Все файлы(*.*)|*.*";
+            if (openFileDialog.ShowDialog() == true)
+                textBox.Text = File.ReadAllText(openFileDialog.FileName);
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Текстовый файл(*.txt)|*.txt|Все файлы(*.*)|*.*";
+            if (saveFileDialog.ShowDialog() == true)
+                File.WriteAllText(saveFileDialog.FileName, textBox.Text);
+        }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }   
 }
