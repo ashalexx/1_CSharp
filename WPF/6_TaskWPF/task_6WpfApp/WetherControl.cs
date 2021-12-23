@@ -7,6 +7,9 @@ using System.Windows;
 
 namespace task_6WpfApp
 {
+
+
+    // честно, ничего не понял, но разбираюсь =), думаю со временем встанет все на свои места 
     internal class WeatherControl: DependencyObject
     {
         public static readonly DependencyProperty TemperatureProperty = DependencyProperty.Register(
