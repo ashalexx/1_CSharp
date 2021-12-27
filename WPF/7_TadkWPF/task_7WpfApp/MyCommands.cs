@@ -9,10 +9,12 @@ namespace task_7WpfApp
 {
     internal class MyCommands
     {
-        public static RoutedCommand Exit { get; set; }
-        static MyCommands()
-        {
-            Exit = new RoutedCommand();
-        }        
+        //public static RoutedCommand Exit { get; set; }
+        //static MyCommands()
+        //{
+        //    Exit = new RoutedCommand();
+        //}
+        //
+        //ApplicationCommands
     }
 }

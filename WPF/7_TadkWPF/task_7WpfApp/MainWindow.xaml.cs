@@ -25,12 +25,7 @@ namespace task_7WpfApp
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void ExitExecuted(object sender, ExecutedRoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
+        }      
 
         private void OpenExecuted(object sender, ExecutedRoutedEventArgs e)
         {
@@ -46,6 +41,11 @@ namespace task_7WpfApp
             saveFileDialog.Filter = "Текстовый файл(*.txt)|*.txt|Все файлы(*.*)|*.*";
             if (saveFileDialog.ShowDialog() == true)
                 File.WriteAllText(saveFileDialog.FileName, textBox1.Text);
+        }
+
+        private void ExitExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
         //private void MenuItem_Click(object sender, RoutedEventArgs e)
         //{
