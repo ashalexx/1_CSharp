@@ -14,6 +14,7 @@ namespace task_7WpfApp
         public static RoutedCommand U { get; set; }
         public static RoutedCommand Foreground1 { get; set; }
         public static RoutedCommand Foreground2 { get; set; }
+        
         static MyCommands()
         {
             B = new RoutedCommand();
@@ -21,6 +22,7 @@ namespace task_7WpfApp
             U = new RoutedCommand();
             Foreground1 = new RoutedCommand();
             Foreground2 = new RoutedCommand();
+            
         }       
 
     }
