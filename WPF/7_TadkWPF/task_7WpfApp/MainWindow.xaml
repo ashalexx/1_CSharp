@@ -10,7 +10,11 @@
         <CommandBinding Command="Close" Executed="ExitExecuted"/>
         <CommandBinding Command="Open" Executed="OpenExecuted"/>
         <CommandBinding Command="Save" Executed="SaveExecuted"/>
-        <CommandBinding Command="local:MyCommands.FontWeight" Executed="Button_Click"/>
+        <CommandBinding Command="local:MyCommands.B" Executed="BExecuted"/>
+        <CommandBinding Command="local:MyCommands.I" Executed="IExecuted"/>
+        <CommandBinding Command="local:MyCommands.U" Executed="UExecuted"/>
+        <CommandBinding Command="local:MyCommands.Foreground1" Executed="Foreground1Executed"/>
+        <CommandBinding Command="local:MyCommands.Foreground2" Executed="Foreground2Executed"/>
     </Window.CommandBindings>
     <Grid>
         <Grid.RowDefinitions>
@@ -41,23 +45,23 @@
                 </ComboBox>
             </ToolBar >
             <ToolBar Margin="5" Padding="5">
-                <Button Width="30.9" Command="Button_Click">
+                <Button Command="local:MyCommands.B">
                     <Image Source="Data/button_blank_blue_14984.png" Width="25"/>
                 </Button>
                 <Separator/>
-                <Button Click="Button_Click_1">
+                <Button Command="local:MyCommands.I">
                     <Image Source="Data/button_blank_green_14986.png" Width="25"/>
                 </Button>
                 <Separator/>
-                <Button Click="Button_Click_2">
+                <Button Command="local:MyCommands.U">
                     <Image Source="Data/button_blank_yellow_14988.png" Width="25"/>
                 </Button>
                 <Separator/>
             </ToolBar>
             <ToolBar Margin="5" Padding="5">
                 <StackPanel VerticalAlignment="Center">
-                    <RadioButton Content="Черный" IsChecked="True" Checked="RadioButton_Checked"/>
-                    <RadioButton Content="Красный" Checked="RadioButton_Checked_1"/>
+                    <RadioButton Content="Черный" IsChecked="True" Command="local:MyCommands.Foreground1"/>
+                    <RadioButton Content="Красный" Command="local:MyCommands.Foreground2"/>
                 </StackPanel>
             </ToolBar>
         </ToolBarTray>
