@@ -25,47 +25,86 @@ namespace task_7WpfApp
         public MainWindow()
         {
             InitializeComponent();
-        }      
+        }
+        
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string fountName = ((sender as ComboBox).SelectedItem as TextBlock).Text;
+            if (textBox != null)
+            {
+                textBox.FontFamily = new FontFamily(fountName);
+            }
+        }
 
-        private void OpenExecuted(object sender, ExecutedRoutedEventArgs e)
+        private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            string fount = ((sender as ComboBox).SelectedItem as TextBlock).Text;
+            if (textBox != null)
+            {
+                textBox.FontSize = Convert.ToDouble(fount);
+            }
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (textBox.FontWeight == FontWeights.Normal)
+                textBox.FontWeight = FontWeights.Bold;
+            else
+                textBox.FontWeight = FontWeights.Normal;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (textBox.FontStyle == FontStyles.Normal)
+                textBox.FontStyle = FontStyles.Italic;
+            else
+                textBox.FontStyle = FontStyles.Normal;
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (textBox != null)
+                if (textBox.TextDecorations != TextDecorations.Baseline)
+                    textBox.TextDecorations = TextDecorations.Baseline; // не пойму почему не сробатывает кнопка с первого нажатия
+                else
+                    textBox.TextDecorations = null;
+        }
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if (textBox != null)
+                //if (true)
+                textBox.Foreground = new SolidColorBrush(Colors.Black);
+            //if(false)
+            //    textBox.Foreground = null;
+        }
+
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        {
+            if (textBox != null)
+                //    if (true)
+                textBox.Foreground = new SolidColorBrush(Colors.Red);
+            //if (false)
+            //    textBox.Foreground = null;
+        }
+
+        private void OpenExecuted(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Текстовый файл(*.txt)|*.txt|Все файлы(*.*)|*.*";
             if (openFileDialog.ShowDialog() == true)
-                textBox1.Text = File.ReadAllText(openFileDialog.FileName);
+                textBox.Text = File.ReadAllText(openFileDialog.FileName);
         }
 
-        private void SaveExecuted(object sender, ExecutedRoutedEventArgs e)
+        private void SaveExecuted(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Текстовый файл(*.txt)|*.txt|Все файлы(*.*)|*.*";
             if (saveFileDialog.ShowDialog() == true)
-                File.WriteAllText(saveFileDialog.FileName, textBox1.Text);
+                File.WriteAllText(saveFileDialog.FileName, textBox.Text);
         }
 
-        private void ExitExecuted(object sender, ExecutedRoutedEventArgs e)
+        private void ExitExecuted(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
-        }
-        //private void MenuItem_Click(object sender, RoutedEventArgs e)
-        //{
-        //    OpenFileDialog openFileDialog = new OpenFileDialog();
-        //    openFileDialog.Filter = "Текстовый файл(*.txt)|*.txt|Все файлы(*.*)|*.*";
-        //    if (openFileDialog.ShowDialog() == true)
-        //        textBox1.Text = File.ReadAllText(openFileDialog.FileName);
-        //}
-
-        //private void MenuItem_Click_1(object sender, RoutedEventArgs e)
-        //{
-        //    SaveFileDialog saveFileDialog = new SaveFileDialog();
-        //    saveFileDialog.Filter = "Текстовый файл(*.txt)|*.txt|Все файлы(*.*)|*.*";
-        //    if (saveFileDialog.ShowDialog() == true)
-        //        File.WriteAllText(saveFileDialog.FileName, textBox1.Text);
-        //}
-
-        //private void MenuItem_Click_2(object sender, RoutedEventArgs e)
-        //{
-        //    Application.Current.Shutdown();
-        //}
+        }        
     }    
 }
