@@ -1,0 +1,39 @@
+﻿<Window x:Class="task_11WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:task_11WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>       
+        <Path Fill="Red" Stroke="Black" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Path.Data>
+                <CombinedGeometry GeometryCombineMode="Union">
+                    <CombinedGeometry.Geometry1>
+                <CombinedGeometry GeometryCombineMode="Xor">
+                    <CombinedGeometry.Geometry1>
+                        <EllipseGeometry RadiusX="100" RadiusY="100" Center="100,100"/> 
+                    </CombinedGeometry.Geometry1>
+                    <CombinedGeometry.Geometry2>
+                        <EllipseGeometry RadiusX="80" RadiusY="80" Center="100,100"/>
+                    </CombinedGeometry.Geometry2>                    
+                </CombinedGeometry>
+                    </CombinedGeometry.Geometry1>
+                    <CombinedGeometry.Geometry2>
+                        <RectangleGeometry Rect="-70,130 180,20" >
+                            <RectangleGeometry.Transform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-39.094"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </RectangleGeometry.Transform>
+                        </RectangleGeometry>
+                    </CombinedGeometry.Geometry2>
+                </CombinedGeometry>
+            </Path.Data>            
+        </Path>        
+    </Grid>
+</Window>
