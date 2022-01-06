@@ -1,0 +1,150 @@
+﻿<Window x:Class="_1_Blend_WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1_Blend_WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="250" Background="White" MinHeight="400" MinWidth="250">
+    <Grid >
+        <Ellipse HorizontalAlignment="Left" Height="70" Margin="47,33.4,0,0" Stroke="Black" VerticalAlignment="Top" Width="22.4" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.Fill>
+                <RadialGradientBrush GradientOrigin="0.873,0.17" RadiusY="0.533" RadiusX="0.533">
+                    <GradientStop Color="#FF06C0F9" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-58.666"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse HorizontalAlignment="Left" Height="70" Margin="82.6,10.2,0,0" Stroke="Black" VerticalAlignment="Top" Width="22.4" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.Fill>
+                <RadialGradientBrush GradientOrigin="0.873,0.17" RadiusY="0.533" RadiusX="0.533">
+                    <GradientStop Color="#FF06C0F9" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-13.827"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse HorizontalAlignment="Left" Height="70" Margin="122.2,9,0,0" Stroke="Black" VerticalAlignment="Top" Width="22.4" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.Fill>
+                <RadialGradientBrush GradientOrigin="0.873,0.17" RadiusY="0.533" RadiusX="0.533">
+                    <GradientStop Color="#FF06C0F9" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="12.068"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse HorizontalAlignment="Left" Height="70" Margin="159.8,31.4,0,0" Stroke="Black" VerticalAlignment="Top" Width="22.4" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.Fill>
+                <RadialGradientBrush GradientOrigin="0.873,0.17" RadiusY="0.533" RadiusX="0.533">
+                    <GradientStop Color="#FF06C0F9" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="54.368"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse HorizontalAlignment="Left" Height="70" Margin="170.2,75,0,0" Stroke="Black" VerticalAlignment="Top" Width="22.4" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.Fill>
+                <RadialGradientBrush GradientOrigin="0.873,0.17" RadiusY="0.533" RadiusX="0.533">
+                    <GradientStop Color="#FF06C0F9" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="92.835"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse HorizontalAlignment="Left" Height="70" Margin="149.8,117,0,0" Stroke="Black" VerticalAlignment="Top" Width="22.4" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.Fill>
+                <RadialGradientBrush GradientOrigin="0.873,0.17" RadiusY="0.533" RadiusX="0.533">
+                    <GradientStop Color="#FF06C0F9" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="137.521"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse HorizontalAlignment="Left" Height="70" Margin="35,75,0,0" Stroke="Black" VerticalAlignment="Top" Width="22.4" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.Fill>
+                <RadialGradientBrush GradientOrigin="0.873,0.17" RadiusY="0.533" RadiusX="0.533">
+                    <GradientStop Color="#FF06C0F9" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="265.989"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Ellipse HorizontalAlignment="Left" Height="70" Margin="53.8,113.8,0,0" Stroke="Black" VerticalAlignment="Top" Width="22.4" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.Fill>
+                <RadialGradientBrush GradientOrigin="0.873,0.17" RadiusY="0.533" RadiusX="0.533">
+                    <GradientStop Color="#FF06C0F9" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="228.677"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Path Stroke="Green" Data="M115.6,144.4 C115.6,144.4 83.633332,196.69999 90.566665,232.96666 91.201691,236.28833 91.756186,239.14918 92.246543,241.63648 97.109993,266.30603 95.664021,254.22986 103.90016,290.56611 112.9667,330.56596 92.166983,340.69879 88.433701,347.09876" HorizontalAlignment="Left" Height="203.7" Margin="87,142,0,0" Stretch="Fill" VerticalAlignment="Top" Width="30" StrokeThickness="3" />
+        <Ellipse HorizontalAlignment="Left" Height="90.4" Margin="69.2,56,0,0" Stroke="Black" VerticalAlignment="Top" Width="90.4">
+            <Ellipse.Fill>
+                <RadialGradientBrush GradientOrigin="0.873,0.17" RadiusY="0.533" RadiusX="0.533">
+                    <GradientStop Color="#FFCCF906" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Path Data="M98.733333,242.66667 C92.997379,242.90239 88.524039,245.67621 82.733333,245.06667 78.138221,244.58297 74.277306,242.85733 69.933333,242.13333 56.679434,239.92435 56.039366,229.95905 48.866667,219.2 48.866667,237.0708 52.598158,242.30102 65.4,256.26667 69.968371,261.25034 75.148605,266.48855 84.866667,259.2 90.623834,254.88212 94.774064,249.07171 97.666667,242.66667" HorizontalAlignment="Left" Height="46.598" Margin="47.867,218.2,0,0" Stretch="Fill" Stroke="Green" StrokeThickness="3" VerticalAlignment="Top" Width="52.866" Fill="#FF45DD15"/>
+
+    </Grid>
+</Window>
