@@ -1,0 +1,71 @@
+﻿<Window x:Class="task_12WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:task_12WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="400" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="CheckBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="CheckBox">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Rectangle Stroke="Black" Height="15" Width="15" 
+                                       HorizontalAlignment="center"
+                                       VerticalAlignment="Center"
+                                       RadiusX="3"
+                                       RadiusY="3"
+                                       />
+                            <Path x:Name="dot" Data="F1 M 147.5,0.5C 228.686,0.5 294.5,24.4528 294.5,54C 294.5,83.5472 228.686,107.5 147.5,107.5C 66.3141,107.5 0.5,83.5472 0.5,54C 0.5,24.4528 66.3142,0.5 147.5,0.5 Z" 
+                                  Fill="Black"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center" 
+                                   Margin="61.112,5.3,61.4,6.05" Stretch="Fill" 
+                                  Opacity="0" Height="6"
+                                  Width="6"
+                                  />
+
+                            <ContentPresenter Content="{TemplateBinding Content}" Grid.Row="1"
+                                              HorizontalAlignment="Center"
+                                              VerticalAlignment="Top"
+                                              Height="auto"
+                                              Width="auto" IsEnabled="False">
+                                
+                            </ContentPresenter>
+                        </Grid>
+                        <ControlTemplate.Triggers >
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="dot" Property="Opacity" Value="1"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="{x:Null}">
+                                <Setter TargetName="dot" Property="Opacity" Value="1"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <CheckBox Content="Checked"/>
+        <CheckBox Grid.Column="1" Content="IsCheked"
+                  
+                  />
+        <CheckBox x:Name="checkBox_2" Grid.Column="2" Content="Indeterminate"
+                  
+                  />
+        
+    </Grid>
+</Window>
