@@ -1,0 +1,77 @@
+﻿<Window x:Class="task_9WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:task_9WpfApp"       
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Style="{DynamicResource WindowStyle}">
+    <Window.CommandBindings>
+        <CommandBinding Command="Close" Executed="ExitExecuted"/>
+        <CommandBinding Command="Open" Executed="OpenExecuted"/>
+        <CommandBinding Command="Save" Executed="SaveExecuted"/>
+        <CommandBinding Command="local:MyCommands.B" Executed="BExecuted"/>
+        <CommandBinding Command="local:MyCommands.I" Executed="IExecuted"/>
+        <CommandBinding Command="local:MyCommands.U" Executed="UExecuted"/>
+        <CommandBinding Command="local:MyCommands.Foreground1" Executed="Foreground1Executed"/>
+        <CommandBinding Command="local:MyCommands.Foreground2" Executed="Foreground2Executed"/>
+    </Window.CommandBindings>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu Margin="5" Padding="5" Style="{DynamicResource WindowStyle}">
+            <MenuItem Header="_Файл">
+                <MenuItem Header="_Открыть" Command="Open" />
+                <MenuItem Header="_Сохранить" Command="Save" />
+                <Separator/>
+                <MenuItem Header="_Закрыть" Command="Close"/>
+            </MenuItem>
+        </Menu>
+        <ToolBarTray Grid.Row="1" Style="{DynamicResource TextBlockStyle}">
+            <ToolBar Margin="5" Padding="5" Style="{DynamicResource TextBlockStyle}">
+                <ComboBox x:Name="textStyle" Margin="5" Padding="5" SelectedIndex="0" Width="200" 
+                          ItemsSource="{StaticResource fontStyle}" 
+                          Style="{DynamicResource TextBlockStyle}"/>
+                <ComboBox x:Name="textSize" Margin="5" Padding="5" SelectedIndex="2" Width="50" 
+                          ItemsSource="{StaticResource fontSize}" 
+                          Style="{DynamicResource TextBlockStyle}"/>
+            </ToolBar >
+            <ToolBar Margin="5" Padding="5" Style="{DynamicResource TextBlockStyle}">
+                <Button Command="local:MyCommands.B">
+                    <Image Source="Data/button_blank_blue_14984.png" Width="25"/>
+                </Button>
+                <Separator/>
+                <Button Command="local:MyCommands.I">
+                    <Image Source="Data/button_blank_green_14986.png" Width="25"/>
+                </Button>
+                <Separator/>
+                <Button Command="local:MyCommands.U">
+                    <Image Source="Data/button_blank_yellow_14988.png" Width="25"/>
+                </Button>
+                <Separator/>
+            </ToolBar>
+            <ToolBar Margin="5" Padding="5" Style="{DynamicResource WindowStyle}">
+                <StackPanel VerticalAlignment="Center" >
+                    <RadioButton Content="Черный" IsChecked="True" Command="local:MyCommands.Foreground1" 
+                                 Style="{DynamicResource RadioButtonStyle}"/>
+                    <RadioButton Content="Красный" Command="local:MyCommands.Foreground2" 
+                                 Style="{DynamicResource RadioButtonStyle}"/>
+                </StackPanel>
+            </ToolBar>
+            <ToolBar Margin="5" Padding="5" Style="{DynamicResource WindowStyle}">
+                <ComboBox x:Name="Box" Style="{DynamicResource TextBlockStyle}">
+                </ComboBox>
+            </ToolBar>
+        </ToolBarTray>
+        <TextBox x:Name="textBox" 
+                 Grid.Row="2" 
+                 Margin="5" 
+                 Padding="5" 
+                 FontSize="{Binding ElementName=textSize, Path=SelectedItem }" 
+                 FontFamily="{Binding ElementName=textStyle, Path=SelectedItem }" 
+                 TextWrapping="Wrap" Style="{DynamicResource TextBlockStyle}"/>
+    </Grid>
+</Window>
