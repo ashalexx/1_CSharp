@@ -1,0 +1,158 @@
+﻿<Window x:Class="task_15WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:task_15WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <FlowDocumentScrollViewer>
+            <FlowDocument>
+                <Paragraph FontSize="30">
+                    <Floater Width="300" HorizontalAlignment="Right">
+                        <BlockUIContainer>
+                            <Image Source="Data/45059635263cf26cfc1c9339eb48ceb0dccb6301.jpeg" Height="150"/>
+                        </BlockUIContainer>
+                    </Floater>
+                    <Bold >
+                        <Hyperlink NavigateUri="https://vc.ru/life/100221-kak-pomoch-sebe-vklyuchitsya-v-rabotu-posle-novogodnih-kanikul-i-ne-soyti-s-uma">Как помочь себе включиться в работу после новогодних каникул и не сойти с ума</Hyperlink>
+                    </Bold>
+                </Paragraph>
+
+                <Paragraph>
+                    О том, как избежать стресса и быстрее влиться в рабочий ритм, рассказывают психотерапевт из сервиса подбора психотерапевтов
+                    <Hyperlink NavigateUri="https://bemeta.co/">«Мета»</Hyperlink> Евгения Пронина и карьерный коуч Ольга Казарезова.
+                </Paragraph>
+
+                <Paragraph>
+                    Некоторые возвращаются с каникул отдохнувшими и радостно берутся за работу. Но если у вас в первый день опускаются руки при виде кучи дел, вам тяжело входить в рабочий ритм — вы не одиноки, это тоже нормально. По версии
+                    <Hyperlink NavigateUri="https://www.eurekalert.org/news-releases/781092">испанских исследователей
+                    </Hyperlink> , с этим сталкиваются 35% работающих людей.
+                </Paragraph>
+
+                <Paragraph>
+                    Смена привычного распорядка дня, времени сна, климата, часового пояса — это стресс для тела и психики. Изначально стрессом называли реакцию организма на любые перемены. И чем сильнее контраст, тем сильнее стрессовый фактор. По шкале стрессовых факторов
+                    <Hyperlink NavigateUri="https://www.researchgate.net/publication/291348598_Stress_Lifestyle_and_Health">Холмса и Раге</Hyperlink> (куда вошли и позитивные, и негативные перемены в жизни) каникулы имеют индекс 13 баллов. Для сравнения, увольнению присвоено 47 баллов.
+                </Paragraph>
+
+                <Paragraph>
+                    Эти исследователи, правда,
+                    <Hyperlink NavigateUri="https://www.psychologistworld.com/stress/life-events-stress-holmes-rahe">не учитывали</Hyperlink> субъективное значение тех или иных событий. Вполне возможно, что для кого-то и увольнение было бы счастьем. А также то, что уровень стресса зависит от того, как мы с ним справляемся.
+                </Paragraph>
+
+                <Paragraph>
+                    Первые дни на работе после каникул можно сделать легче и интереснее, если правильно выбрать стратегии решения
+                    <Bold>задач</Bold> и воспользоваться
+                    <Bold>возможностями</Bold> этого периода.
+                </Paragraph>
+
+                <Paragraph FontSize="20">
+                    <Bold>Задача: плавно войти в рабочий режим</Bold>
+                </Paragraph>
+
+                <Paragraph>
+                    <Italic>Почему это важно</Italic>
+                </Paragraph>
+
+                <Paragraph>
+                    Каникулы, путешествия, время с близкими дали вам ценную энергию, которую вы можете сохранить во время рабочих дней, а можете и растерять, причем очень легко.
+                </Paragraph>
+
+                <Paragraph>
+                    Вам знакомо это «прекрасное» ощущение — как будто и не отдыхал? Чем резче переход между солнечным пляжем и зимним офисом, тем сильнее стресс от перемены. Разные эксперты
+                    <Hyperlink NavigateUri="https://www.forbes.com/sites/kathryndill/2014/07/28/5-tips-for-getting-back-to-work-after-a-vacation/?sh=5a819fb76f0a">сходятся</Hyperlink> в том, что лучше поберечь энергию в первые дни, чтобы получить большую эффективность в перспективе.
+                </Paragraph>
+
+                <Paragraph>
+                    <Bold>Самые популярные рекомендации:</Bold>
+                </Paragraph>
+
+                <List MarkerStyle="Box">
+                    <ListItem>
+                        <Paragraph>
+                            Если вы проводили каникулы вдали от дома, лучше приехать за день до начала работы, чтобы успеть сделать домашние дела и дать себе хорошо выспаться перед первым рабочим днем. Исследователи
+                            <Hyperlink NavigateUri="https://www.mirror.co.uk/news/uk-news/exactly-how-long-take-get-18800355">выяснили
+                            </Hyperlink> , что на стабилизацию сна уходит до 3 дней.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Во время рабочего дня стоит делать небольшие перерывы чуть чаще, чем обычно.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Вознаграждайте себя чем-то приятным за выполнение задач.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Не задерживайтесь на работе без крайней необходимости.
+                        </Paragraph>
+                    </ListItem>
+                </List>
+                <Paragraph FontSize="20">
+                    <Bold>Задача: разгрести то, что накопилось</Bold>
+                </Paragraph>
+
+                <Paragraph>
+                    <Italic>Почему это важно</Italic>
+                </Paragraph>
+
+                <Paragraph>
+                    После отпуска кажется, что все дела склеились в одну большую неподъемную кучу. Надо делать все и сразу и от этого руки опускаются, ведь это выглядит как невыполнимая задача. А это прямой путь к
+                    <Hyperlink NavigateUri="https://www.bbc.com/future/article/20190805-eight-ways-to-curb-your-procrastination">прокрастинации</Hyperlink> и недовольству собой.
+                </Paragraph>
+
+                <Paragraph>
+                    Разбираем кучу дел по принципу Матрицы Эйзенхауэра. В этой технике задачи делятся по критериям важности и срочности.
+                </Paragraph>
+
+                <Table >
+                    <Table.Columns>
+                        <TableColumn Width="auto"/>
+                        <TableColumn Width="auto"/>
+                        <TableColumn Width="auto"/>
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph TextAlignment="Center"></Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph TextAlignment="Center">СРОЧНО</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph TextAlignment="Center">НЕ СРОЧНО</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph TextAlignment="Center">ВАЖНО</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph TextAlignment="Center" Background="Pink">A</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph TextAlignment="Center" Background="Green">B</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph TextAlignment="Center">НЕ ВАЖНО</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph TextAlignment="Center" Background="Yellow">C</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph TextAlignment="Center" Background="Gray">D</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+    </Grid>
+</Window>
