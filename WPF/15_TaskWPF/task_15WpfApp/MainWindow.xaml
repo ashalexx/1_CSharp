@@ -108,10 +108,10 @@
                 <Paragraph>
                     Разбираем кучу дел по принципу Матрицы Эйзенхауэра. В этой технике задачи делятся по критериям важности и срочности.
                 </Paragraph>
-
-                <Table >
+                
+                <Table>
                     <Table.Columns>
-                        <TableColumn Width="auto"/>
+                        <TableColumn Width="auto" />
                         <TableColumn Width="auto"/>
                         <TableColumn Width="auto"/>
                     </Table.Columns>
