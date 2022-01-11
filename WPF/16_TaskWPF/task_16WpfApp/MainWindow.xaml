@@ -53,12 +53,12 @@
                                 Storyboard.TargetProperty="(Canvas.Top)"
                                 Duration="0:0:3"
                                 RepeatBehavior="Forever">
-                                <LinearDoubleKeyFrame KeyTime="0%" Value="150"/>
+                                <LinearDoubleKeyFrame KeyTime="0%" Value="151"/>
                                 <LinearDoubleKeyFrame KeyTime="20%" Value="137"/>
                                 <LinearDoubleKeyFrame KeyTime="40%" Value="90"/>
                                 <LinearDoubleKeyFrame KeyTime="60%" Value="80"/>
                                 <LinearDoubleKeyFrame KeyTime="80%" Value="118"/>
-                                <LinearDoubleKeyFrame KeyTime="99%" Value="150"/>
+                                <LinearDoubleKeyFrame KeyTime="99%" Value="151"/>
                             </DoubleAnimationUsingKeyFrames>
                         </Storyboard>
                     </BeginStoryboard>
