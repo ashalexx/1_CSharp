@@ -12,6 +12,7 @@
     </Window.DataContext>
     <Grid>
         <StackPanel>
+            <TextBlock Text="Введите радиус:"/>
             <TextBox Text="{Binding Path=Number1}"/>            
             <Button Content="Расчитать длину окружности" Command="{Binding Path=AddCommand}"/>
             <TextBox Text="{Binding Path=Number3}"/>
