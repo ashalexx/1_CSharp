@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace task_19WpfApp
+namespace task_FinalWpfApp.Views
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml

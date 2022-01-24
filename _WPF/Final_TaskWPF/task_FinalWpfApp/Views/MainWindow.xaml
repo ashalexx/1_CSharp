@@ -1,0 +1,213 @@
+﻿<Window x:Class="task_FinalWpfApp.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"        
+        xmlns:c="clr-namespace:task_FinalWpfApp.Commands"
+        xmlns:local="clr-namespace:task_FinalWpfApp.ViewModels" 
+        
+        Title="Калькулятор" 
+        Height="350" 
+        Width="400" 
+        ResizeMode="CanMinimize">
+    <Window.Resources>
+        <Style TargetType="Button" BasedOn="{StaticResource MaterialDesignRaisedLightButton}">
+            <Setter Property="Width" Value="70"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="4"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="FontSize" Value="24"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="RowDefinition">
+            <Setter Property="Height" Value="auto"/>
+        </Style>
+        <Style TargetType="ColumnDefinition">
+            <Setter Property="Width" Value="auto"/>
+        </Style>
+    </Window.Resources>
+    
+    <Window.DataContext>
+        <local:CalculatorViewModel/>
+        <!-- Создаем новый VM и соединяем его со View -->
+    </Window.DataContext>
+    
+    <DockPanel Name="MyPanel">        
+        <Grid Name="MyGrid" 
+              Background="Gray"              
+              Height="auto" 
+              Width="auto"
+              HorizontalAlignment="Center">            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Name="DisplayBox" 
+                       Text="{Binding Path=Display, Mode=TwoWay}" 
+                       Background="White" 
+                       Margin="10,5,10,5" 
+                       Grid.ColumnSpan="5" 
+                       FontSize="24" 
+                       TextAlignment="Right"/>
+            <TextBlock Name="ExpressionBox" 
+                       Text="{Binding Path=FullExpression, Mode=TwoWay}" 
+                       Background="DarkGray" 
+                       TextAlignment="Center" 
+                       Grid.Column="0" 
+                       Grid.Row="1" 
+                       Margin="10,5,10,5" 
+                       Grid.ColumnSpan="3" 
+                       FontSize="18"/>
+
+            <Button Name="Button7"
+                    Content="7"
+                    Command="{Binding DigitButtonPressCommand}" 
+                    CommandParameter="7"
+                    Grid.Column="0"
+                    Grid.Row="2"/>
+            <Button Name="Button8" 
+                    Content="8"
+                    Command="{Binding DigitButtonPressCommand}" 
+                    CommandParameter="8"                    
+                    Grid.Column="1"                    
+                    Grid.Row="2"/>
+            <Button Name="Button9" 
+                    Content="9"
+                    Command="{Binding DigitButtonPressCommand}" 
+                    CommandParameter="9"                      
+                    Grid.Column="2" 
+                    Grid.Row="2"/>
+            
+            <Button Name="Button4" 
+                    Content="4"
+                    Command="{Binding DigitButtonPressCommand}" 
+                    CommandParameter="4"                    
+                    Grid.Column="0" 
+                    Grid.Row="3"/>
+            <Button Name="Button5" 
+                    Content="5"
+                    Command="{Binding DigitButtonPressCommand}" 
+                    CommandParameter="5"                   
+                    Grid.Column="1" 
+                    Grid.Row="3"/>
+            <Button Name="Button6" 
+                    Content="6"
+                    Command="{Binding DigitButtonPressCommand}" 
+                    CommandParameter="6"                     
+                    Grid.Column="2" 
+                    Grid.Row="3"/>
+
+            <Button Name="Button1" 
+                    Content="1"
+                    Command="{Binding DigitButtonPressCommand}" 
+                    CommandParameter="1" 
+                    Grid.Column="0" 
+                    Grid.Row="4"/>
+            <Button Name="Button2" 
+                    Content="2"
+                    Command="{Binding DigitButtonPressCommand}" 
+                    CommandParameter="2" 
+                    Grid.Column="1" 
+                    Grid.Row="4"/>
+            <Button Name="Button3" 
+                    Content="3"
+                    Command="{Binding DigitButtonPressCommand}" 
+                    CommandParameter="3" 
+                    Grid.Column="2" 
+                    Grid.Row="4"/>
+
+            <Button Name="Button0" 
+                    Content="0"
+                    Command="{Binding DigitButtonPressCommand}" 
+                    CommandParameter="0" 
+                    Grid.Column="0" 
+                    Grid.Row="7"/>
+            <Button Name="ButtonPoint"
+                    Content="."
+                    Command="{Binding DigitButtonPressCommand}" 
+                    CommandParameter="." 
+                    Grid.Column="1" 
+                    Grid.Row="7"/>
+
+            <Button Name="ButtonPlusMinus" 
+                    Content="+/-"
+                    Command="{Binding DigitButtonPressCommand}" 
+                    CommandParameter="+/-" 
+                    Background="DarkGray" 
+                    Grid.Column="2" 
+                    Grid.Row="5"/>
+
+            <Button Name="ButtonDivide" 
+                    Content="/"
+                    Command="{Binding OperationButtonPressCommand}" 
+                    CommandParameter="/" 
+                    Background="Darkgray" 
+                    Grid.Column="3" 
+                    Grid.Row="2"/>
+
+            <Button Name="ButtonMultiply" 
+                    Content="*"
+                    Command="{Binding OperationButtonPressCommand}" 
+                    CommandParameter="*" 
+                    Background="Darkgray" 
+                    Grid.Column="3" 
+                    Grid.Row="3"/>
+
+            <Button Name="ButtonMinus" 
+                    Content="-"
+                    Command="{Binding OperationButtonPressCommand}" 
+                    CommandParameter="-" 
+                    Background="Darkgray" 
+                    Grid.Column="3" 
+                    Grid.Row="4"/>
+
+            <Button Name="ButtonPlus" 
+                    Content="+"
+                    Command="{Binding OperationButtonPressCommand}" 
+                    CommandParameter="+" 
+                    Background="Darkgray" 
+                    Grid.Column="3" 
+                    Grid.Row="5"/>
+
+            <Button Name="ButtonC" 
+                    Content="C"
+                    Command="{Binding DigitButtonPressCommand}" 
+                    CommandParameter="C" 
+                    Background="Darkgray" 
+                    Grid.Column="4" 
+                    Grid.Row="1" 
+                    ToolTip="Clear All"/>
+
+            <Button Name="ButtonDel" 
+                    Content="Del"
+                    Command="{Binding DigitButtonPressCommand}" 
+                    CommandParameter="Del" 
+                    Background="Darkgray" 
+                    Grid.Column="3" 
+                    Grid.Row="1" 
+                    ToolTip="Delete"/>
+            
+            <Button Name="ButtonEqual" 
+                    Content="="
+                    Command="{Binding OperationButtonPressCommand}" 
+                    CommandParameter="=" 
+                    Background="Darkgray" 
+                    Grid.Column="4" 
+                    Grid.Row="5"/>
+        </Grid>
+    </DockPanel>
+</Window>

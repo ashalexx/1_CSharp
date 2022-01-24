@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace task_19WpfApp
@@ -16,9 +12,10 @@ namespace task_19WpfApp
         {
             add => CommandManager.RequerySuggested += value;
             remove => CommandManager.RequerySuggested -= value;
-        }
+        }        
+        
+        // конструктор
 
-        // создаем конструктор
         public RelayCommand(Action<object> Execute, Func<object, bool> CanExecute = null)
         {
             execute = Execute ?? throw new ArgumentNullException(nameof(Execute));
